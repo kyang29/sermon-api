@@ -12,7 +12,7 @@ The Database table was created in this migration:
 database\migrations\2019_12_11_021409_create_sermons_table.php
 
 Script for creating Sermons table(As Asked)
-'''sql
+```sql
 CREATE TABLE `sermons` (
   `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE `sermons` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 )
-'''
+```
 Command to migrate is: php artisan migrate --path=database\migrations\2019_12_11_021409_create_sermons_table.php
 
 The data being seeded into the table was created in this seed file:
