@@ -1,0 +1,49 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Sermon API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/Sermons": {
+            "get": {
+                "summary": "Get list of Sermons",
+                "operationId": "App\\Http\\Controllers\\SermonController::index",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/Sermons/List": {
+            "get": {
+                "summary": "Get list of Sermons",
+                "operationId": "App\\Http\\Controllers\\SermonController::getList",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page of Sermon",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "take",
+                        "in": "query",
+                        "description": "pagination Size, If None, Default to 10",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    }
+}
